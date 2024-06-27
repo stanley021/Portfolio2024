@@ -18,7 +18,7 @@ const RecentProjects = () => {
         Recent <span className="text-purple">Projects</span>
       </h1>
     
-      <div className="grid md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 py-20">
+      <div className="grid md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-1 py-20">
         {projects.map((project) => (
           <div key={project.id} className="flex items-center justify-center">
             <div className="py-8">
@@ -37,7 +37,7 @@ const RecentProjects = () => {
                     alt={project.title}
                     height={1000}
                     width={1000}
-                    className="h-80 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    className="h-50 lg:h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   />
                 </CardItem>
                 <div className="flex justify-between items-center mt-5">
