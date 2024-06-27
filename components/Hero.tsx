@@ -58,7 +58,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I'm <span className="text-purple">Stanley Chen</span> a Software Engineer based in Toronto, Ontario.
+            Hi! I&apos;m <span className="text-purple">Stanley Chen</span> a Software Engineer based in Toronto, Ontario.
           </p>
 
           <a href="#about">
