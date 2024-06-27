@@ -10,10 +10,10 @@ export const gridItems = [
     id: 1,
     title: "CS graduate from Western University",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[45vh] sm: h-full",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-4 lg:min-h-[45vh] ",
     imgClassName: "w-full h-full lg:absolute md:absolute",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/me.jpg",
     spareImg: "",
   },
   {
@@ -22,8 +22,8 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 bg-white",
     // flex h-full w-full item-center justify-center 
-    imgClassName:"flex items-center justify-center lg:translate-y-5 lg:h-60 sm:h-full sm:w-full absolute sm:-translate-y-1 md:translate-y-2",
-    titleClassName: "justify-start",
+    imgClassName:"flex items-center justify-center absolute w-full h-full",
+    titleClassName: "justify-start min-h-40",
     img: "/western.png",
     spareImg: "",
   },
@@ -69,7 +69,7 @@ export const gridItems = [
     spareImg: "",
   },
 ];
-export const skills = ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"]
+export const skills = ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/python.svg"]
 
 export const projects = [
   {
@@ -77,7 +77,7 @@ export const projects = [
     title: "Captcha",
     des: "Built a training model using Deep Learning to solve captchas using Tensorflow and SSD Inception v2 (COCO).",
     img: "/p1.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/python.svg"],
     link: "",
   },
   {
@@ -85,7 +85,7 @@ export const projects = [
     title: "Chess ",
     des: "Created a Chess game using object oriented programming.",
     img: "/p2.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/python.svg"],
     link: "",
   },
   {
@@ -93,15 +93,15 @@ export const projects = [
     title: "Snake",
     des: "Created a Snake game using object oriented programming.",
     img: "/p3.jpg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/python.svg"],
     link: "",
   },
   {
     id: 4,
     title: "Coming Soon!",
     des: "",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    img: "",
+    iconLists: [],
     link: "",
   },
 ];
@@ -207,6 +207,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    url: "https://github.com/stanley021",
   },
   {
     id: 2,
@@ -215,5 +216,6 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+    url: "https://www.linkedin.com/in/stanley-chen-240b1b172/",
   },
 ];
