@@ -399,9 +399,8 @@ const GridGlobe = () => {
     // change absolute -left-5 top-36, add w-full h-full md:top-40
     <div className="flex items-center justify-center absolute top-20 w-full h-full -left-4">
       {/* remove h-full md:h-[40rem] */}
-      <div className="max-w-7xl mx-auto w-full absolute overflow-hidden h-96 px-4 bottom-0 ">
-        
-        
+      <div className="max-w-[30rem] mx-auto w-full absolute overflow-hidden h-96 px-4 bottom-0 ">
+    
         {/* remove -bottom-20 */}
         <div className="absolute w-full h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />

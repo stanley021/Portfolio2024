@@ -74,15 +74,16 @@ const Hero = () => {
         </div>
         
       </div>
-      <div className=" justify-center relative mt-96 m-12">
+      <div className="justify-center relative mt-96 m-12">
         <GridGlobe />
+      </div>
+      
+    
 
-        </div>
-      
-      
     </div>
     
   );
+  
 };
 
 export default Hero;

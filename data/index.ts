@@ -69,7 +69,7 @@ export const gridItems = [
     spareImg: "",
   },
 ];
-export const skills = ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/python.svg"]
+export const skills = ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/python.svg","/dock.svg", "/ruby.svg", "/rails.svg", "/javascript.svg"]
 
 export const projects = [
   {
