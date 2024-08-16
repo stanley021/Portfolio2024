@@ -13,11 +13,11 @@ import Link from "next/link";
 
 const RecentProjects = () => {
   return (
-    <div className="py-4">
-      <h1 className="heading p-9">
-        Recent <span className="text-purple">Projects</span>
+    <div className="py-4" id="projects">
+      <h1 className="heading p-9" >
+        Recent <span className="text-purple" >Projects</span>
       </h1>
-    
+      <a href="#projects"></a>
       <div className="grid md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-1 py-20 ">
         {projects.map((project) => (
           <div key={project.id} className="flex items-center justify-center ">
