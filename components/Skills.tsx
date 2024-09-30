@@ -24,7 +24,7 @@ import { skills } from "@/data";
 const Skills = () =>{
     return(
 
-    <div className="py-36 w-full">
+    <div className="py-36 w-full p-20">
         
         <h1 className="heading">
         Tech<span className="text-purple"> Stack</span>

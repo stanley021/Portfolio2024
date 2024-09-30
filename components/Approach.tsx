@@ -3,9 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
+
+
+
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 p-20">
       <h1 className="heading">
         My <span className="text-purple">Experience</span>
       </h1>

@@ -4,7 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/components/ui/use-outside-click";
 
-export function ProjectExpand() {
+export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
@@ -33,9 +33,9 @@ export function ProjectExpand() {
   return (
     <>
       <section className="w-full py-0 p-20">
-        <h6 className="heading p-12 pb-20">
-          <span className="text-purple">-</span>
-        </h6>
+        <h1 className="heading p-12 pb-20">
+          Experience /<span className="text-purple">  Projects</span>
+        </h1>
         <AnimatePresence>
           {active && typeof active === "object" && (
             <motion.div
@@ -52,9 +52,18 @@ export function ProjectExpand() {
               <motion.button
                 key={`button-${active.title}-${id}`}
                 layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, transition: { duration: 0.05 } }}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.05,
+                  },
+                }}
                 className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
                 onClick={() => setActive(null)}
               >
@@ -63,13 +72,10 @@ export function ProjectExpand() {
               <motion.div
                 layoutId={`card-${active.title}-${id}`}
                 ref={ref}
-                className="w-full h-auto max-w-2xl flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+                className="w-full max-w-[500px] md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
               >
-                <motion.div
-                  layoutId={`image-${active.title}-${id}`}
-                  className="relative w-full h-auto max-h-[60vh] max-w-[90vw] mx-auto" // Adjusted max height and width
-                >
-                  <Image
+                <motion.div layoutId={`image-${active.title}-${id}`}>
+                <Image
                     priority
                     src={active.src}
                     alt={active.title}
@@ -103,7 +109,7 @@ export function ProjectExpand() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                      className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:none] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                     >
                       {typeof active.content === "function"
                         ? active.content()
@@ -165,9 +171,18 @@ export function ProjectExpand() {
 export const CloseIcon = () => {
   return (
     <motion.svg
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.05 } }}
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 0.05,
+        },
+      }}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -188,44 +203,111 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "",
-    title: "Captcha",
-    src: "/p1.jpg",
+    description: "May 2022 - Aug 2023",
+    title: "Bell Canada",
+    src: "/bell.png",
     ctaText: "View",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>
-          Built a training model using Deep Learning to solve captchas using TensorFlow and SSD Inception v2 (COCO).
-        </p>
+        <div>
+          <p>
+            - Built a Ruby on Rails app for AES encryption decryption, increasing efficiency by 25% and enhancing security.
+          </p>
+          <p>
+            - Automated IP route maintenance with a Bash script, reducing time by 5%.
+          </p>
+          <p>
+            - Improved system uptime by directing live traffic with F5.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '20px' }}>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', flex: '1' }}>
+              <li>Ruby on Rails</li>
+              <li>HTML</li>
+              <li>JavaScript</li>
+              <li>CSS</li>
+            </ul>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', flex: '1' }}>
+              <li>Bash</li>
+              <li>Docker</li>
+              <li>F5</li>
+              <li>Putty</li>
+              <li>Unix</li>
+            </ul>
+          </div>
+        </div>
       );
     },
   },
   {
-    description: "",
-    title: "Chess",
-    src: "/p2.jpg",
+    description: "May 2021 - Sep 2021",
+    title: "MGCS",
+    src: "/ontario.png",
     ctaText: "View",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>
-          Created a Chess game using object-oriented programming.
-        </p>
+        <div>
+          <p>
+            - Built an API management platform with IBM API Connect, boosting efficiency by 30%.
+          </p>
+          <p>
+            - Created a unified API catalog, enhancing visibility by 20%.
+          </p>
+          <p>
+            - Streamlined documentation process, cutting time spent by 50%.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '20px' }}>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', flex: '1' }}>
+              <li>IBM API Connect</li>
+              <li>GCP</li>
+              <li>OpenAPI</li>
+              <li>Postman</li>
+            </ul>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', flex: '1' }}>
+              <li>Markdown</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </div>
       );
     },
   },
   {
-    description: "",
-    title: "Snake",
-    src: "/p3.jpg",
+    description: "Jan 2021 - May 2021",
+    title: "Skyquark",
+    src: "/skyquark.png",
     ctaText: "View",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>
-          Created a Snake game using object-oriented programming.
-        </p>
+        <div>
+          <p>
+            - Developed a CAPTCHA solver using TensorFlow and SSD Inceptionv2.
+          </p>
+          <p>
+            - Created a web app using the MERN stack, enhancing user experience.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '20px' }}>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', flex: '1' }}>
+              <li>TensorFlow</li>
+              <li>Node.js</li>
+              <li>React</li>
+              <li>Express.js</li>
+            </ul>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '20px', flex: '1' }}>
+              <li>MongoDB</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </div>
       );
     },
   },
