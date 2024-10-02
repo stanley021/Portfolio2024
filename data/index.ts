@@ -209,13 +209,18 @@ export const socialMedia = [
     img: "/git.svg",
     url: "https://github.com/stanley021",
   },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
+  // {
+  //   id: 2,
+  //   img: "/twit.svg",
+  // },
   {
     id: 3,
     img: "/link.svg",
     url: "https://www.linkedin.com/in/stanley-chen-240b1b172/",
   },
+  // {
+  //   id: 4,
+  //   img: "/link.svg",
+  //   url: "stanley.chen021@gmail.com",
+  // },
 ];

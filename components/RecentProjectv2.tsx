@@ -63,13 +63,10 @@ export function ProjectExpand() {
               <motion.div
                 layoutId={`card-${active.title}-${id}`}
                 ref={ref}
-                className="w-full h-auto max-w-2xl flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+                className="w-full max-w-[500px] md:h-fit flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
               >
-                <motion.div
-                  layoutId={`image-${active.title}-${id}`}
-                  className="relative w-full h-auto max-h-[60vh] max-w-[90vw] mx-auto" // Adjusted max height and width
-                >
-                  <Image
+                <motion.div layoutId={`image-${active.title}-${id}`}>
+                <Image
                     priority
                     src={active.src}
                     alt={active.title}
@@ -188,7 +185,7 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "",
+    description: "Sept - April (2020)",
     title: "Captcha",
     src: "/p1.jpg",
     ctaText: "View",
@@ -202,7 +199,7 @@ const cards = [
     },
   },
   {
-    description: "",
+    description: "Feb - April (2019)",
     title: "Chess",
     src: "/p2.jpg",
     ctaText: "View",
@@ -216,7 +213,7 @@ const cards = [
     },
   },
   {
-    description: "",
+    description: "Sept - Feb (2019)",
     title: "Snake",
     src: "/p3.jpg",
     ctaText: "View",
