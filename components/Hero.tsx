@@ -53,7 +53,7 @@ const Hero = () => {
           </p>
 
           <MagicButton
-            title="Show my work"
+            title="Resume"
             icon={<FaLocationArrow />}
             position="right"
             handleClick={openModal} // Open modal on button click

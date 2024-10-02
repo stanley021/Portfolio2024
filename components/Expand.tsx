@@ -32,7 +32,7 @@ export function ExpandableCardDemo() {
 
   return (
     <>
-      <section className="w-full py-0 p-20">
+      <section className="w-full py-0 p-20" id="projects">
         <h1 className="heading p-12 pb-20">
           Experience /<span className="text-purple">  Projects</span>
         </h1>
