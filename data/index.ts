@@ -23,7 +23,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 bg-white",
     // flex h-full w-full item-center justify-center 
     imgClassName:"flex items-center justify-center absolute w-full h-full",
-    titleClassName: "justify-start min-h-40",
+    titleClassName: "justify-start min-h-28",
     img: "/western.png",
     spareImg: "",
   },
